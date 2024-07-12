@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --primary-color: #6c63ff;
+    --color-success:#00bf8e;
+    --color-warning:#f7c94b;
+    --color-danger:#f75842;
+    --color-danger-variant:rgba(247,88,66,0.4);
+    --color-white:#fff;
+    --color-light:rgba(255,255,255,0.7);;
+    --color-black:#000;
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+
+    --container-width-lg:80%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+
+    --transition:all 400ms ease;
+
+    --main-font:"Playfair Display", serif;
+    --secondary-font:'Roboto',sans-serif;
+    --optional-font:"Edu NSW ACT Foundation", cursive;
+}
+body{
+    font-family: var(--main-font);
+    color: var(--color-white);
+    background-color: var(--color-bg)
+}
+.logo{
+    font-size: 2rem;
+    font-family: var(--secondary-font)
+}
+.container{
+    width: var(--container-width-lg);
+   margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li a{
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+section{
+    padding: 6rem 0;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1,h2,h3,h4,h5{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+a{
+    color: var(--color-white);
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.btn{
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.btn:hover{
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.btn-primary{
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+nav{
+    background-color: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+nav button{
+    display: none;
+}
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+
+}
+
+.nav_menu a{
+    font-size: 1rem;
+    transition: all 400ms ease;
+  
+}
+.nav_menu a:hover{
+    color: var(--color-bg2);
+}
+
+/* ********************************************************************* */
+/************************ header  ***************************************/
+
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+.header_container{
+    display: grid;
+    grid-template-columns:  1fr 1fr ;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+.headerp{
+    font-family: var(--optional-font);
+}
+.header_left p{
+    margin:1rem 0 2.4rem;
+}
+
+/* ********************************************************************* */
+/************************ CATEGORY SECTION  *****************************/
+.categories{
+    background-color: var(--color-bg1);
+    
+}
+.categories h1{
+ line-height: 1;
+ margin-bottom: 3rem;   
+}
+.categories__container{
+display: grid;
+grid-template-columns: 40% 60%;
+/* gap: 4rem; */
+}
+.categories_left{
+    margin: 1rem 0 3rem;
+    margin-right: 3rem;
+}
+.categories_right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /*short hand for writing the size and number of columns*/
+    gap: 1.2rem;
+  
+}
+.category{
+    background-color: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+.category:hover{
+  box-shadow: 0 3rem 3rem  rgba(0, 0, 0, 0.3);   
+}
+
+.category_icon{
+    background-color: var(--primary-color);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+.category h5{
+    margin: 2rem 0 1rem;
+}
+.category p{
+    font-size: 0.85rem;
+}
+.category-btn{
+padding: 20px;
+margin-top: 40px;
+}
+
+
+/* ********************************************************************* */
+/************************ COURSES SECTION  *****************************/
+
+.course{
+    margin-top: 10rem;
+}
+.courses__container{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 2rem;
+}
+.course{
+    background-color: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+}
+.course:hover{
+    background: transparent;
+    border-color: var(--primary-color);
+    transition: var(--transition);
+}
+.course__info{
+    padding: 2rem;
+}
+.course__info p{
+    margin: 1.2rem 0rem;
+    font-size: 0.9rem
+}
+
+/* ********************************************************************* */
+/************************ FAQS SECTION  *****************************/
+.faqs{
+    background-color: var(--color-bg1);
+    box-shadow:     inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.faqs_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.faq{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.faq h4{
+    font-size: 1rem;
+    line-height: 2.2rem;
+
+}
+.faqs_icon{
+    align-items: flex-start;
+    font-size: 1.2rem;
+
+}
+.faq p{
+    margin-top: 0.9rem ;
+    display: none;
+}
+.faq.open p{
+display: block;
+}
+
+
+/* ********************************************************************* */
+/************************ Testimonial SECTION  *****************************/
+
+.testmonial_container {
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.testmonial {
+    padding-top: 2rem;
+}
+
+.avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--color-bg1);
+}
+
+.testimonial_info {
+    text-align: center;
+}
+
+.testimonial_body {
+    background-color: var(--primary-color);
+    padding: 3rem;
+    color: #fff; 
+    border-radius: 0.5rem; /* Optional for rounded corners */
+    margin: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+.testimonial_body::before{
+    content: "";
+    display: block;
+    background: linear-gradient(-135deg,transparent,var(--primary-color),var(--primary-color));
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: rotate(-45deg);
+}
+.testimonial_head{
+    font-size: 2.7rem;
+    margin-top: 60px;
+    text-align: center;
+}
+/* ********************************************************************* */
+/************************   FOOTER SECTION  *****************************/
+footer{
+    background-color: var(--color-bg1);
+    padding: 5rem;
+    font-size: 0.9rem;
+}
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+}
+.footer_container> div h4{
+    margin-bottom: 1.2rem;
+}
+.footer_1{
+    margin: 0 0 2rem;
+}
+footer ul li{
+    margin-bottom: 0.7rem;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}
+.footer_socials{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
